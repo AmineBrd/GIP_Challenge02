@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+     *{
+        padding: 0;
+        margin: 0;
+        font-family: arial;
+        box-sizing: border-box;
+    }
+    body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+width: 1440px;
+height: 158px;
+left: 0px;
+top: 0px;
+position:absolute;
+background-color: black;
+}
+.inside-header{
+    width: 1200px;
+    height: 48px;
+    left: 88px;
+    top: 55px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+.logo-shop{
+    color: #F7F8F8;
+    font-size: 23px;
+    font-family: arial;
+    font-weight: 900;
+    padding-left: 30px;
+}
+.home{
+    color: #F7F8F8;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 600;
+    left: 740px;
+    top: 8px;
+    position: absolute;
+    justify-content:flex-start;
+    align-items: center;
+    display: inline-flex;
+}
+.rectangle{
+    width: 57px;
+    height: 5px;
+    left: 734px;
+    top: 38px;
+    position: absolute;
+    background: #D9D9D9;
+    border-radius: 5px;
+}
+.product{
+    color: #F7F8F8;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+    left: 830px;
+    top: 12px;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+}
+.cart{
+    right: 220px;
+    top: 12px;
+    position: absolute;
+    color: #F7F8F8;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+}
+.text{
+    font-size: 64px;
+    font-family: arial;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.login{
+    right: 140px;
+    top: 12px;
+    position: absolute;
+    color: #F7F8F8;
+    font-size: 14px;
+    font-family: arial; 
+    font-weight: 600; 
+}
+.signup{
+    height: 32px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 16px;
+    right: 40px;
+    top: 5px;
+    position: absolute;
+    background: #FF8900;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 500;
+}
+.blur1{
+    width: 1440px;
+    height: 871px;
+    left: 0px;
+    top: 949px;
+    position: absolute;
+    background: #3B3B3B;
+    filter: blur(250px);
+}
+.blur2{
+    width: 464px;
+    height: 464px;
+    left: 0px;
+    top: 776px;
+    position: absolute;
+    background: #919191;
+    box-shadow: 250px 250px 250px;
+    border-radius: 9999px;
+    filter: blur(130px);
+}
+.blur3{
+    width: 464px;
+    height: 464px;
+    left: 381px;
+    top: 1621px;
+    position: absolute;
+    background: #f98501;
+    box-shadow: 250px 250px 250px;
+    border-radius: 9999px;
+    filter: blur(120px);
+}
+.blur4{
+    width: 464px;
+    height: 464px; 
+    top: 1621px;
+    position: absolute;
+    background: #f98501;
+    box-shadow: 250px 250px 250px;
+    border-radius: 9999px;
+    filter: blur(120px);
+}
+.blur5{
+    width: 464px;
+    height: 464px; 
+    top: 1413px;
+    position: absolute;
+    background: white;
+    box-shadow: 250px 250px 250px;
+    border-radius: 9999px;
+    filter: blur(150px);
+}
+.blur6{
+width: 464px;
+height: 464px;
+left: -232px;
+top: 949px;
+position: absolute;
+background: #FF8900;
+box-shadow: 250px 250px 250px;
+border-radius: 9999px;
+filter: blur(150px);
+}
+.layout2{
+    width: 1440px;
+    height: 791px;
+    left: 0px;
+    top: 158px;
+    position: absolute;
+    background: #DBDBDB;
+}
+.rectangle-orange{
+    width: 270px;
+    height: 83.89px;
+    left: 175.35px;
+    top: 375px;
+    position: absolute;
+    transform: rotate(-3.55deg);
+    transform-origin: 0 0;
+    background: #FF8900;
+}
+.rectangle-black{
+    width: 366px;
+    height: 86px;
+    left: 169px;
+    top: 508px;
+    position: absolute;
+    transform: rotate(1.64deg);
+    transform-origin: 0 0;
+    background: black;
+}
+.revive{
+    width: 504px;
+    height: 456px;
+    left: 187px;
+    top: 376px;
+    position: absolute;
+}
+.gris-photo{
+    width: 529px;
+    height: 474px;
+    left: 728px;
+    top: 316px;
+    position: absolute;
+    background: #3B3B3B;
+}
+.popular-items-text{
+    width: 376px;
+    height: 77px;
+    left: 548px;
+    top: 983px;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.layout-popular-items{
+    width: 345px;
+    height: 502px;
+    position: absolute;
+    background: black;
+    border-radius: 30px;
+}
+.inside-layout-popular-items{
+    top : 21px;
+    left: 21px;
+    width: 304px;
+    height: 334px;
+    position: absolute;
+    background: white;
+    border-radius: 26px;
+}
+.popular-product-text{
+    width: 299px;
+    height: 97px;
+    top: 1467px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.layout3-orange{
+    width: 1439px;
+    height: 791px;
+    left: 0px;
+    top: 1820px;
+    position: absolute;
+    background: #FF8900;
+}
+.rectangle-image{
+    width: 529px;
+    height: 474px;
+    left: 168px;
+    top: 1979px;
+    position: absolute;
+    background: black;
+}
+.rectangle-white-rolated{
+    width: 406px;
+    height: 86px;
+    left: 800px;
+    top: 2021.31px;
+    position: absolute;
+    transform: rotate(-1.17deg);
+    transform-origin: 0 0;
+    background: white;
+}
+.rectangle-black-rolated{
+    width: 542px;
+    height: 287px;
+    left: 732px;
+    top: 2122px;
+    position: absolute;
+    transform: rotate(1.83deg);
+    transform-origin: 0 0;
+    background: black;
+}
+.aboutus-sentence{
+    width: 529px;
+    height: 464px;
+    position: absolute;
+    text-align: center;
+    left: 732px;
+}
+.footer{
+    width: 1440px;
+    height: 447px;
+    left: 0px;
+    top: 2611px;
+    position: absolute;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="inside-header">
+        <div class="logo-shop">logo SWAG SHOP</div>
+        <div class="home">HOME</div>
+        <div class="rectangle"></div>
+        <div class="product">PRODUCTS</div>
+        <div class="cart">CART</div>
+        <div class="login">LOG IN</div>
+            <button class="signup">Sign up</button>
+    </div>
+</header>
+        <div class="blur1"></div> <!--page with blur-->
+        <div class="blur2"></div>
+        <div class="blur3"></div>
+        <div class="blur4"></div>
+        <div class="blur5"></div>
+        <div class="blur6"></div>
+        <!--after header-->
+        <div class="layout2"></div>
+        <div class="rectangle-orange"></div>
+        <div class="rectangle-black"></div>
+        
+
+        <div class="revive">
+        <span class="text" style="color: black">Revive <br/>the Classics <br/></span>
+        <span class="text" style="color: #F7F8F8">Embrace</span>
+        <span class="text" style="color: black"> <br/>Your Swag.</span>
+        </div>
+
+        <div class="gris-photo"></div> <!--this is gris photo-->
+        <div class="popular-items-text">POPULAR ITEMS</div>
+
+        <div class="layout-popular-items" style="left: 955px; top:1086px; ">
+            <div class="inside-layout-popular-items"></div>
+        </div>
+        <div class="layout-popular-items" style="left: 548px; top: 1086px;">
+            <div class="inside-layout-popular-items"></div>
+        </div>
+        <div class="layout-popular-items" style="left: 143px; top: 1086px;">
+            <div class="inside-layout-popular-items"></div>
+        </div>
+        
+        <div style="left: 168px;" class="popular-product-text">Product name<br/>price<br/>see more(product page)</div>
+        <div style="left: 568px;" class="popular-product-text">Product name<br/>price<br/>see more(product page)</div>
+        <div style="left: 977px;" class="popular-product-text">Product name<br/>price<br/>see more(product page)</div>
+       
+        
+      
+        <!--last ones-->
+        <div class="layout3-orange"></div>
+        <div class="rectangle-image"></div>
+        <div class="rectangle-white-rolated"></div>
+        <div style=" top: 2020px;" class="aboutus-sentence"><span style="color: black; font-size: 64px; font-family: arial; font-weight: 700;">ABOUT US</span></div>
+        <div class="rectangle-black-rolated"></div>
+        <div style=" top: 2160px;" class="aboutus-sentence"><span style="color: white; font-size: 25px; font-family: arial; font-weight: 700; text-transform: uppercase;">are thrilled to introduce our venture into the world of swag, bringing you a curated collection of smart and stylish items that seamlessly blend brainpower with fashion flair, At Brainy, we believe that swag is not just a statement—it's a mindset</span></div>
+        
+        
+        <div style="top: 2611px; width: 1440px; height: 447px; left: 0px; position: absolute; background: black">
+            <div style="left: 188px; top: 85px; position: absolute; color: #F7F8F8; font-size: 34px; font-family:arial; font-weight: 900;">SWAG SHOP</div>
+            <div style="left: 548px; top: 92px; position: absolute; color: #F7F8F8; font-size: 28px; font-family: arial; font-weight: 500;">BRAINY</div>
+            <div style="left: 913px; top: 92px; position: absolute; color: #F7F8F8; font-size: 28px; font-family: arial; font-weight: 500;">LEGAL</div>
+            <div style="left: 548px; top: 166px; position: absolute; color: #F7F8F8; font-size: 28px; font-family: arial; font-weight: 500;">HOME<br/><br/>PRODUCTS<br/><br/>CART</div>
+            <div style="left: 908px; top: 166px; position: absolute; color: #F7F8F8; font-size: 28px; font-family: arial; font-weight: 500;">TERMS & CONDITIONS<br/><br/>PRIVACY POLICY</div>
+            
+            <img style="width: 59px; height: 59px; left: 913px; top: 296px; position: absolute;" src="facebookgip.png" />
+            <img style="width: 59px; height: 59px; left: 996px; top: 303px; position: absolute;" src="instagramgip.png" />
+            <img style="width: 62px; height: 59px; left: 1078px; top: 304px; position: absolute" src="twittergip.png" />
+        </div>
+        
+</body>
+
+</html>
