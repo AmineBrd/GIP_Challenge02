@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login window</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: arial;
+        box-sizing: border-box;
+    }
+body{
+    min-height: 100%;
+    width: 100%;
+    background-color: white;
+}
+.container{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+max-width: 430px;
+padding-top: 50px;
+width: 100%;
+background: #fff;
+border-radius: 38px;
+box-shadow: 0 5px 10px rgb(141, 140, 140);
+align-items: center;
+}
+ 
+.container .layout{
+    padding: 1.3rem;
+}
+.layout input{
+height: 70px;
+width: 100%;
+padding: 0 15px;
+font-size: 17px;
+margin-bottom: 1.3rem;
+border: 1px solid #ddd;
+border-radius: 6px;
+box-shadow:7px 6px 13px 6px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+outline: none;
+}
+.layout input:focus{
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+
+
+.layout input.button{
+background-color: rgb(197, 121, 6);
+color: #070202;
+font-size: 1.2rem;
+font-weight: 700;
+margin-top: 1.7rem;
+letter-spacing: 1px;
+width: 50%;
+transition: 0.01ms;
+cursor: pointer;
+}
+.button{
+  margin-left: 90px;
+}
+.layout input.button:hover{
+    background-color: rgb(241, 195, 67);
+}
+.login{
+    font-size: 17px;
+    text-align: center;
+}
+.login label{
+    color: #009579;
+    cursor: pointer;
+}
+.login label:hover{
+    text-decoration: underline;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="layout">
+    <form >
+      <input type="text" placeholder="Enter your username">
+    <input type="text" placeholder="Enter your password">
+    <input type="button" class="button" value="LOG IN">
+    </form>
+    <div class="login">
+        <span>Dont't have any any account ? 
+        <label >Sign up</label>
+        </span>
+    </div>
+    </div>
+  </div>
+  </body>
+
+</html>
