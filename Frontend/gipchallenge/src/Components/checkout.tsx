@@ -10,6 +10,7 @@ interface CheckoutItemProps {
     removeItem: (index: number) => void;
     size: string;
     imageUrl: string;
+    category: string;
 }
 
 const CheckoutItem: React.FC<CheckoutItemProps> = ({
@@ -21,6 +22,7 @@ const CheckoutItem: React.FC<CheckoutItemProps> = ({
     removeItem,
     size,
     imageUrl,
+    category,
 }) => {
     const totalPrice = itemPrice * quantity;
 
@@ -45,6 +47,7 @@ const CheckoutItem: React.FC<CheckoutItemProps> = ({
                     <div className="row align-items-center">
                         <div className="col-md-6 mb-2 mb-md-0">
                             <p className="card-text mb-1">{itemName}</p>
+                            <h5 className="card-title mb-2 mb-lg-0">{category}</h5>
                             <div className="d-flex align-items-center">
                                 <span className="me-2">Size:</span>
                                 <span>{size}</span>
