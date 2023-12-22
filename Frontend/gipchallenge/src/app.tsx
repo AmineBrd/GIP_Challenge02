@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import CheckoutItem from './components/checkout'; // Update the path to your CheckoutItem component
+import CheckoutItem from './components/checkout';
 
 const App: React.FC = () => {
     const [items, setItems] = useState<{
