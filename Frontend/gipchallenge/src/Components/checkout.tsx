@@ -38,21 +38,18 @@ const CheckoutItem: React.FC<CheckoutItemProps> = ({
   return (
     <div className="my-3">
       <div className="d-flex align-items-center border border-secondary p-4 rounded-4">
-        <img src={imageUrl} alt={itemName} className='rounded-4' />
+        <img src={imageUrl} alt={itemName} className="rounded-4" style={{ maxWidth: '125px' }} />
         <div className="ms-3">
           <h3>{itemName}</h3>
           <p>{category}</p>
           <p>Size: {size}</p>
-          <div className="d-flex align-items-center">
-            <button
-              className="btn btn-outline-dark"
-              onClick={handleDecrease}
-            >
+          <div className="d-flex align-items-center flex-wrap">
+            <button className="btn btn-outline-dark" onClick={handleDecrease}>
               -
             </button>
             <input
               type="number"
-              className="form-control mx-2"
+              className="form-control mx-2 w-25"
               value={quantity}
               onChange={(e) => updateQuantity(index, parseInt(e.target.value))}
               aria-label="Quantity"
