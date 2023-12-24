@@ -60,7 +60,7 @@ export const CheckboxWithLabel = ({ size }) => {
         checked={selectedFilters.size.includes(size)}
         onChange={handleCheckboxChange}
       />
-      <label className="btn btn-warning" htmlFor={`btn-check-${size}`}>
+      <label className="btn btn-warning size" htmlFor={`btn-check-${size}`}>
         {size}
       </label>
     </div>

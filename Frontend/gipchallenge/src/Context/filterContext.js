@@ -16,14 +16,14 @@ export const FilterProductContextProvider = ({ children }) => {
       ...prevFilters,
       [category]: value,
     }));
-    console.log(selectedFilters)
+    console.log(selectedFilters);
   };
 
-  // Add item to cart 
+  // Add item to cart
   const addItemCart = (item) => {
     setCartItems((prev) => [...prev, item]);
   };
-  // remove item from cart 
+  // remove item from cart
   const removeItemCart = (item) => {
     setCartItems((prevCart) => {
       const updatedCart = prevCart.slice();

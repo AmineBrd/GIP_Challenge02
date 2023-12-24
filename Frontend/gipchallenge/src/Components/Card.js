@@ -28,7 +28,7 @@ const Card = ({ item }) => {
     <div className="container">
       <div className="card">
         <div className="card-body d-flex flex-column align-items-center bg-light rounded">
-          <img className="rounded w-100" src={`${item.url}`} alt={item.name} />
+          <img className="rounded w-100" src={`${item.imageUrl}`} alt={item.name} />
           <h5 className="card-title p-2 d-inline-block text-truncate mw-100">
             {item.name}
           </h5>
