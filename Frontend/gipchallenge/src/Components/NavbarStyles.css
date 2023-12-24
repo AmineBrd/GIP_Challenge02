@@ -5,6 +5,9 @@ nav{
     background-color: black;
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 #navbar{
@@ -57,13 +60,14 @@ nav{
     }
     #navbar.active{
         right: 0px;
-       
+
     }
     #navbar li{
         margin-bottom: 25px;
     }
     #mobile{
         display: block;
+        cursor: pointer;
     }
     #mobile i{
         font-size: 25px;
