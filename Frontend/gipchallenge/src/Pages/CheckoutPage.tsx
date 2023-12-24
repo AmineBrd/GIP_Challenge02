@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import CheckoutItem from "../Components/Checkout.tsx";
 import { FilterContext } from '../Context/filterContext.js';
 import Navbar from '../Components/Navbar.js';
@@ -15,10 +15,16 @@ const Page: React.FC = () => {
         category: string; // Adding category to the item structure
     }[]>(cartItems);
 
+    useEffect(() => {
+        setItems(cartItems);
+    }, [cartItems]);
+
     const removeItemFromCheckout = (index: number) => {
         const updatedItems = items.filter((_, i) => i !== index);
         setCartItems(updatedItems);
+        localStorage.setItem("shoppingCart", JSON.stringify(updatedItems));
         setItems(updatedItems);
+
     };
 
     const updateItemQuantity = (index: number, newQuantity: number) => {
@@ -29,9 +35,6 @@ const Page: React.FC = () => {
 
     const totalPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
-
-    // Get unique categories from the selected items
-    const uniqueCategories = Array.from(new Set(items.map((item) => item.category)));
 
     // Suggested items based on the categories of selected items
     const suggestedItemsData = [

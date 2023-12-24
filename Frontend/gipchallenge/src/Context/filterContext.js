@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const FilterContext = createContext(null);
 
@@ -10,6 +10,12 @@ export const FilterProductContextProvider = ({ children }) => {
     size: [],
     type: [],
   });
+  // Load cart items from local storage
+  useEffect(() => {
+    const storedCartItems = JSON.parse(localStorage.getItem("shoppingCart"));
+    setCartItems(storedCartItems);
+  }, []);
+  // Update local storage on every
 
   const updateSelectedFilters = (category, value) => {
     setSelectedFilters((prevFilters) => ({
@@ -22,6 +28,7 @@ export const FilterProductContextProvider = ({ children }) => {
   // Add item to cart
   const addItemCart = (item) => {
     setCartItems((prev) => [...prev, item]);
+    localStorage.setItem("shoppingCart", JSON.stringify([...cartItems, item]));
   };
   // remove item from cart
   const removeItemCart = (item) => {
@@ -32,6 +39,7 @@ export const FilterProductContextProvider = ({ children }) => {
       );
       if (indexToRemove !== -1) {
         updatedCart.splice(indexToRemove, 1);
+        localStorage.setItem("shoppingCart", JSON.stringify(updatedCart));
       }
       return updatedCart;
     });
