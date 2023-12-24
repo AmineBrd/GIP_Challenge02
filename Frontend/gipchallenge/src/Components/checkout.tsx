@@ -55,7 +55,10 @@ const CheckoutItem: React.FC<CheckoutItemProps> = ({
               aria-label="Quantity"
               aria-valuemin={1}
             />
-            <button className="btn btn-outline-dark" onClick={handleIncrease}>
+            <button
+              className="btn btn-outline-dark"
+              onClick={handleIncrease}
+            >
               +
             </button>
             <span className="mx-2">${itemPrice.toFixed(2)}</span>
