@@ -1,39 +1,125 @@
 const items = [
-    {
-      name: "Dello",
-      size: "M",
-      type: "T-Shirts",
-      price: 20.99,
-      url: "https://img.freepik.com/photos-gratuite/peinture-lac-montagne-montagne-arriere-plan_188544-9126.jpg",
-    },
-    {
-      name: "gello",
-      size: "M",
-      type: "Socks",
-      price: 15.99,
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOBXGVxP257QOtzY57IA9ak1CguBj9JfYIrbpQxg8ZeQ&s",
-    },
-    {
-      name: "zello",
-      size: "M",
-      type: "Hoodies",
-      price: 25.99,
-      url: "https://img.freepik.com/photos-gratuite/peinture-lac-montagne-montagne-arriere-plan_188544-9126.jpg",
-    },
-    {
-      name: "jello",
-      size: "M",
-      type: "Shoes",
-      price: 18.99,
-      url: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
-    },
-    {
-      name: "qello",
-      size: "M",
-      type: "Socks",
-      price: 22.99,
-      url: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
-    },
-  ];
+  {
+      id:1,
+      name:"TeeElite",
+      size:"XL",
+      type:"T-Shirt",
+      imageUrl:"https://picsum.photos/200",
+      price:500
+  },
+  {
+    id:2,
+    name:"KickKout",
+    size:"L",
+    type:"Shoes",
+    imageUrl:"https://picsum.photos/200",
+    price:400
+  },
+  {
+    id:3,
+    name:"CapCraze",
+    size:"L",
+    type:"Hat",
+    imageUrl:"https://picsum.photos/200",
+    price:350
+  },
+  {
+    id:4,
+    name:"CozyCouture",
+    size:"XL",
+    type:"Hoodie",
+    imageUrl:"https://picsum.photos/200",
+    price:760
+  },
+  {
+    id:5,
+    name:"FreshFlex",
+    size:"L",
+    type:"Shoes",
+    imageUrl:"https://picsum.photos/200",
+    price:420
+  },
+  {
+    id:6,
+    name:"SoleStylin'",
+    size:"M",
+    type:"Socks",
+    imageUrl:"https://picsum.photos/200",
+    price:100
+  },
+  {
+    id:7,
+    name:"SoleSwag",
+    size:"S",
+    type:"Shoes",
+    imageUrl:"https://picsum.photos/200",
+    price:800
+  },
+  {
+    id:8,
+    name:"SwagThread",
+    size:"M",
+    type:"T-Shirt",
+    imageUrl:"https://picsum.photos/200",
+    price:300
+  },
+  {
+    id:9,
+    name:"BrimBlitz",
+    size:"M",
+    type:"Hat",
+    imageUrl:"https://picsum.photos/200",
+    price:270
+  },
+  {
+    id:10,
+    name:"SwagSocksElite",
+    size:"L",
+    type:"Socks",
+    imageUrl:"https://picsum.photos/200",
+    price:160
+  },
+  {
+    id:11,
+    name:"DapperKicks",
+    size:"L",
+    type:"Shoes",
+    imageUrl:"https://picsum.photos/200",
+    price:630
+  },
+  {
+    id:12,
+    name:"Jim Beam",
+    size:"L",
+    type:"T-Shirt",
+    imageUrl:"https://picsum.photos/200",
+    price:410
+  },
+  {
+    id:13,
+    name:"HoodHarbor",
+    size:"L",
+    type:"Hoodie",
+    imageUrl:"https://picsum.photos/200",
+    price:590
+  },
+  {
+    id:14,
+    name:"UrbanPulse",
+    size:"XXL",
+    type:"Hoodie",
+    imageUrl:"https://picsum.photos/200",
+    price:1300
+  },
+  {
+    id:15,
+    name:"SoleSync",
+    size:"M",
+    type:"Socks",
+    imageUrl:"https://picsum.photos/600",
+    price:150
+  }
+
+]
 
 export default items;
