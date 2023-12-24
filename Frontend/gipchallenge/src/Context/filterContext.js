@@ -41,6 +41,7 @@ export const FilterProductContextProvider = ({ children }) => {
     <FilterContext.Provider
       value={{
         cartItems,
+        setCartItems,
         removeItemCart,
         addItemCart,
         checkedProductType,

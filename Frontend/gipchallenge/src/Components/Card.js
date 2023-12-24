@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Card.css";
 import { FilterContext } from "../Context/filterContext";
 
@@ -6,11 +6,16 @@ import { FilterContext } from "../Context/filterContext";
 const Card = ({ item }) => {
   const [itemAdded, setItemAdded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { removeItemCart, addItemCart } = useContext(FilterContext);
+  const { cartItems, removeItemCart, addItemCart } = useContext(FilterContext);
+
+  useEffect(() => {
+    // Check if the item is already in the cart
+    const isItemInCart = cartItems.some((cartItem) => cartItem.id === item.id);
+    setItemAdded(isItemInCart);
+  }, [cartItems, item]);
 
   // function to handle adding and removing item from cart
   const toggleItemInCart = () => {
-    setItemAdded(!itemAdded);
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
@@ -53,6 +58,5 @@ const Card = ({ item }) => {
     </div>
   );
 };
-
 
 export default Card;

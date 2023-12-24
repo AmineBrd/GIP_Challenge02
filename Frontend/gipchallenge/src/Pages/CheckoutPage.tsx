@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import CheckoutItem from './components/checkout';
+import React, { useContext, useState } from 'react';
+import CheckoutItem from "../Components/Checkout.tsx";
+import { FilterContext } from '../Context/filterContext.js';
+import Navbar from '../Components/Navbar.js';
+import Footer from '../Components/Footer.js';
 
-const App: React.FC = () => {
+const Page: React.FC = () => {
+    const { cartItems ,setCartItems }:any = useContext(FilterContext);
     const [items, setItems] = useState<{
         name: string;
         size: string;
         price: number;
         quantity: number;
+        imageUrl:string;
         category: string; // Adding category to the item structure
-    }[]>([
-        { name: 'Product 1', size: 'L', price: 20, quantity: 1, category: 'Clothing' }, // Example product 1 with price 20 and category Clothing
-        { name: 'Product 2', size: 'M', price: 30, quantity: 1, category: 'Accessories' }, // Example product 2 with price 30 and category Accessories
-    ]);
+    }[]>(cartItems);
 
     const removeItemFromCheckout = (index: number) => {
         const updatedItems = items.filter((_, i) => i !== index);
+        setCartItems(updatedItems);
         setItems(updatedItems);
     };
 
@@ -69,16 +70,18 @@ const App: React.FC = () => {
                     <h5 className="card-title">{item.name}</h5>
                     <p className="card-text">Size: {item.size}</p>
                     <p className="card-text">Price: ${item.price}</p>
-                    <button className="btn btn-primary">Buy</button>
+                    <button className="btn btn-warning">Buy</button>
                 </div>
             </div>
         </div>
     ));
 
     return (
+        <>
+            <Navbar ></Navbar>
         <div className="container">
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-8 py-5 mt-5">
                     <h2>Checkout Items</h2>
                     {items.length === 0 ? (
                         <p>No items added yet.</p>
@@ -94,19 +97,20 @@ const App: React.FC = () => {
                                     quantity={item.quantity}
                                     updateQuantity={updateItemQuantity}
                                     removeItem={removeItemFromCheckout}
-                                    imageUrl="" // Add the imageUrl prop if available
+                                    imageUrl={item.imageUrl} // Add the imageUrl prop if available
                                     category={item.category} // Pass the category to the CheckoutItem component
                                 />
                             ))}
                         </div>
                     )}
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 py-5 mt-5">
                     <div className="card">
                         <div className="card-body">
                             <h2>MY CART</h2>
                             <p>Total Quantity: {totalQuantity}</p>
                             <p>Total Price: ${totalPrice.toFixed(2)}</p>
+                            <button className='btn btn-dark'>Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -115,7 +119,9 @@ const App: React.FC = () => {
                 {suggestedElements}
             </div>
         </div>
+        <Footer/>
+        </>
     );
 };
 
-export default App;
+export default Page;
