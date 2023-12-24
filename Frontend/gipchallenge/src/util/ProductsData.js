@@ -5,7 +5,8 @@ const items = [
       size:"XL",
       type:"T-Shirt",
       imageUrl:"https://picsum.photos/200",
-      price:500
+      price:500,
+      quantity:1
   },
   {
     id:2,
@@ -13,7 +14,8 @@ const items = [
     size:"L",
     type:"Shoes",
     imageUrl:"https://picsum.photos/200",
-    price:400
+    price:400,
+    quantity:1
   },
   {
     id:3,
@@ -21,7 +23,8 @@ const items = [
     size:"L",
     type:"Hat",
     imageUrl:"https://picsum.photos/200",
-    price:350
+    price:350,
+    quantity:1
   },
   {
     id:4,
@@ -29,7 +32,8 @@ const items = [
     size:"XL",
     type:"Hoodie",
     imageUrl:"https://picsum.photos/200",
-    price:760
+    price:760,
+    quantity:1
   },
   {
     id:5,
@@ -37,7 +41,8 @@ const items = [
     size:"L",
     type:"Shoes",
     imageUrl:"https://picsum.photos/200",
-    price:420
+    price:420,
+    quantity:1
   },
   {
     id:6,
@@ -45,7 +50,8 @@ const items = [
     size:"M",
     type:"Socks",
     imageUrl:"https://picsum.photos/200",
-    price:100
+    price:100,
+    quantity:1
   },
   {
     id:7,
@@ -53,7 +59,8 @@ const items = [
     size:"S",
     type:"Shoes",
     imageUrl:"https://picsum.photos/200",
-    price:800
+    price:800,
+    quantity:1
   },
   {
     id:8,
@@ -61,7 +68,8 @@ const items = [
     size:"M",
     type:"T-Shirt",
     imageUrl:"https://picsum.photos/200",
-    price:300
+    price:300,
+    quantity:1
   },
   {
     id:9,
@@ -69,7 +77,8 @@ const items = [
     size:"M",
     type:"Hat",
     imageUrl:"https://picsum.photos/200",
-    price:270
+    price:270,
+    quantity:1
   },
   {
     id:10,
@@ -77,7 +86,8 @@ const items = [
     size:"L",
     type:"Socks",
     imageUrl:"https://picsum.photos/200",
-    price:160
+    price:160,
+    quantity:1
   },
   {
     id:11,
@@ -85,7 +95,8 @@ const items = [
     size:"L",
     type:"Shoes",
     imageUrl:"https://picsum.photos/200",
-    price:630
+    price:630,
+    quantity:1
   },
   {
     id:12,
@@ -93,7 +104,8 @@ const items = [
     size:"L",
     type:"T-Shirt",
     imageUrl:"https://picsum.photos/200",
-    price:410
+    price:410,
+    quantity:1
   },
   {
     id:13,
@@ -101,7 +113,8 @@ const items = [
     size:"L",
     type:"Hoodie",
     imageUrl:"https://picsum.photos/200",
-    price:590
+    price:590,
+    quantity:1
   },
   {
     id:14,
@@ -109,7 +122,8 @@ const items = [
     size:"XXL",
     type:"Hoodie",
     imageUrl:"https://picsum.photos/200",
-    price:1300
+    price:1300,
+    quantity:1
   },
   {
     id:15,
@@ -117,7 +131,8 @@ const items = [
     size:"M",
     type:"Socks",
     imageUrl:"https://picsum.photos/600",
-    price:150
+    price:150,
+    quantity:1
   }
 
 ]
