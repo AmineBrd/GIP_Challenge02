@@ -9,6 +9,7 @@
 img{
     object-fit: cover;
     height: max(10rem, 40vh);  
+    max-width: 100%;
 }
 
 .btn-check{
