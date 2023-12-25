@@ -41,10 +41,9 @@ a{
 }
 
 .socialmedia img{
-    width: 80%;
+    height: 50px;
     margin: 15px 20px 15px 0;
     cursor: pointer;
-    
 }
 
 .sb_footer-links-div h3{
